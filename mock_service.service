@@ -1,0 +1,13 @@
+[Unit]
+Description=Mock Service (Flask)
+After=network.target
+
+[Service]
+User=www-data
+WorkingDirectory=/opt/mock_service
+ExecStart=/opt/mock_service/venv/bin/python app.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
