@@ -70,7 +70,7 @@ BASE_TEMPLATE = """<!DOCTYPE html>
     <div class="container">
         <h3>{{ title }}</h3>
         <div id="mainPanel">
-            {{ content }}
+            {{ content | safe }}
         </div>
     </div>
     <div id="footer">
